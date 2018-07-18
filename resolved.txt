@@ -1,0 +1,139 @@
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ ls
+first.txt
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git init
+Initialized empty Git repository in C:/kavya/sample/.git/
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git add .
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git commit -m "sample message"
+[master (root-commit) b0ff71d] sample message
+ 1 file changed, 1 insertion(+)
+ create mode 100644 first.txt
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git remote add origin https://github.com/namana23/gitexample.git
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git remote -v
+origin  https://github.com/namana23/gi
+origin  https://github.com/namana23/gitexample.git (fetch)
+origin  https://github.com/namana23/gitexample.git (push)
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git push origin master
+To https://github.com/namana23/gitexample.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/namana23/gitexample.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ ?git pull
+bash: $'\302\203git': command not found
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git fetch
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/namana23/gitexample
+ * [new branch]      master     -> origin/master
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git merge
+fatal: No remote for the current branch
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git fetch origin
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git merge origin master
+merge: origin - not something we can merge
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git push origin master
+To https://github.com/namana23/gitexample.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/namana23/gitexample.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git pull origin master
+From https://github.com/namana23/gitexample
+* branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$git pull origin/master --allow-unrelated-histories
+fatal: 'origin/master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git merge origin/master --allow-unrelated-histories
+Merge made by the 'recursive' strategy.
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+$ git add .
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git commit -m "upload"
+On branch master
+nothing to commit, working tree clean
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ ????git push
+bash: $'\302\203git': command not found
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ git push
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 531 bytes | 531.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/namana23/gitexample.git
+   3789906..8f94c3d  master -> master
+
+Knamana@LMIPL-055 MINGW64 /c/kavya/sample (master)
+$ ?????git branch --set-upstream origi/master????
+

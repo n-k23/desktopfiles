@@ -1,0 +1,14 @@
+$http.post("test.json",{'name': $scope.newfield.name,'color': $scope.newfield.color})
+        .success(function(response) {
+                    console.log(response.data);
+                });
+
+
+
+   
+     var data=JSON.stringify(words, null, 2);
+            fs.writeFile('test.json', data, finished);
+            function finished(err)
+            {
+                console.log("all set");
+            }

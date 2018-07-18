@@ -1,0 +1,16 @@
+<input type="number" id="mynumber" name = "mynumber"/>
+<button type="button" onclick="createCounter(mynumber)">Count</button>
+/*var increment = (function(x) {
+    var counter = x;
+
+/*document.write(counter.value);*/
+   		
+		counter += 1; 
+		return counter;
+	});
+
+function createCounter(mynumber){
+	 
+
+    console.log(increment(mynumber));
+}*/

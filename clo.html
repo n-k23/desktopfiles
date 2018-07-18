@@ -1,0 +1,18 @@
+<html>
+<body>
+<button onclick="showName ("Michael", "Jackson")">click</button>
+<script>
+function showName (firstName, lastName) {?
+?var nameIntro = "Your name is ";
+    // this inner function has access to the outer function's variables, including the parameter?
+?function makeFullName () {?        
+?return nameIntro + firstName + " " + lastName;?    
+}
+?
+?return makeFullName ();?
+}?
+?
+ // Your name is Michael Jackson?
+</script>
+</body>
+</html>
